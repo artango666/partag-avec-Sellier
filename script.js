@@ -1,7 +1,7 @@
-// script.js - interactions: theme toggle, smooth scroll, ripple on buttons
+
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Theme toggle (persist in localStorage)
+
   const themeBtn = document.getElementById('theme-toggle');
   const saved = localStorage.getItem('cv-theme');
   if (saved === 'dark') document.body.classList.add('dark');
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Smooth scroll for internal links
+
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', (e) => {
       const href = a.getAttribute('href');
@@ -25,11 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Minimal UI: remove ripple for a cleaner look
-  // keep button focus styles native for accessibility
 
-  // Download CV
-  // Download CV link fallback: keep link simple
   const dlBtn = document.getElementById('download-cv');
   if (dlBtn) {
     dlBtn.addEventListener('click', () => {
@@ -39,13 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Simple download for sidebar link
+
   const dlSimple = document.getElementById('download-cv-simple');
   if (dlSimple) {
     dlSimple.addEventListener('click', (e) => {
-      // let browser handle it naturally (anchor)
     });
   }
 
-  // No canvas/particles: keep JS minimal and performant
 });
